@@ -1,0 +1,33 @@
+{
+  "name": "filterify",
+  "version": "1.0.0",
+  "description": "Selectively run browserify transforms based on a filter",
+  "main": "filterify.js",
+  "scripts": {
+    "test": "node test.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/severian/filterify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/severian/filterify/issues"
+  },
+  "homepage": "https://github.com/severian/filterify",
+  "author": "James Baird <james@pancake-labs.com>",
+  "license": "MIT",
+  "keywords": [
+    "browserify",
+    "browserify-transform",
+    "transform",
+    "source",
+    "configuration"
+  ],
+  "dependencies": {
+    "through2": "0.6.3"
+  },
+  "devDependencies": {
+    "tap-spec": "2.2.2",
+    "tape": "3.5.0"
+  }
+}
