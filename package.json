@@ -1,6 +1,6 @@
 {
   "name": "filterify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Selectively run browserify transforms based on a filter",
   "main": "filterify.js",
   "scripts": {
