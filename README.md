@@ -24,19 +24,22 @@ It returns a browserify transfom.
 
 ### Example usage
 
-To run [envify](https://github.com/hughsk/envify) on [React](https://github.com/facebook/react) to put it into production mode (which in all candor is the sole reason this project exists):
-
-(where `b` is a browserify instance and `env` is the build mode)
+To run [envify](https://github.com/hughsk/envify) with different environments for different parts of the project (where `b` is a browserify instance):
 
 ``` js
 var filterify = require('filterify');
 var envify = require('envify/custom');
-var isProd = env !== 'dev';
 
-b.transform({ global: true }, filterify({
-  filter: '/node_modules/react/',
+b.transform(filterify({
+  filter: '/prod_mode/',
   transform: envify({
-    NODE_ENV: isProd ? 'production' : 'development'
+    NODE_ENV: 'production'
+  })
+}));
+b.transform(filterify({
+  filter: '/dev_mode/',
+  transform: envify({
+    NODE_ENV: 'development'
   })
 }));
 ```
